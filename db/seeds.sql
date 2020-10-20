@@ -2,10 +2,10 @@
 
 USE burgers_db;
 
-INSERT INTO burgers (burger_name)
+INSERT INTO burgers (burger_name, devoured)
 VALUES 
-("Beets of Burden Burger"),
-("The Human Polenta-pede Burger"),
-("Don't Get Creme Fraiche With Me Burger"),
-("Chard to a Crisp Burger"),
-("Fig-eta 'Bout It Burger")
+("Beets of Burden Burger", false),
+("The Human Polenta-pede Burger", false),
+("Don't Get Creme Fraiche With Me Burger", false),
+("Chard to a Crisp Burger", false),
+("Fig-eta 'Bout It Burger", false)
