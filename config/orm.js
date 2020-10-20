@@ -1,5 +1,5 @@
 // Importing connection.js
-const connection = require("..config/connection.js");
+const connection = require("../config/connections.js");
 
 // Methods to retrieve data and store data in burgers_db
 let orm = {
