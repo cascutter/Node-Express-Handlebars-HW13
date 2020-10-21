@@ -1,8 +1,8 @@
 // Import ORM
-const orm = require("../config/orm.js");
+let orm = require("../config/orm.js");
 
 // The variables cols and vals are arrays.
-const burger = {
+let burger = {
     selectAll: function(cb) {
         orm.selectAll("burgers", function(res) {
             cb(res);
