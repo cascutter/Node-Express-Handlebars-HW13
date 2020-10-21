@@ -27,9 +27,9 @@
         <h4>Burgers Ordered </h4>
         <ul>
             {{#each burgers}}
-            {{#if devoured}}
+            {{#unless devoured}}
             {{> burgers/burger-block devoured=true}}
-            {{/if}}
+            {{/unless}}
             {{/each}}
         </ul>
     </div>
@@ -39,9 +39,9 @@
         <h4>Burgers Devoured </h4>
         <ul>
             {{#each burgers}}
-            {{#unless devoured}}
+            {{#if devoured}}
             {{> burgers/burger-block-devoured devoured=false}}
-            {{/unless}}
+            {{/if}}
             {{/each}}
         </ul>
     </div>
