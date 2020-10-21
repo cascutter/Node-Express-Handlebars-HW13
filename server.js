@@ -5,6 +5,7 @@ const app = express();
 
 // Static content
 app.use(express.static("public"));
+app.use(express.static(__dirname + "/"));
 
 // Parse application body
 app.use(express.urlencoded({ extended: true }));
@@ -17,7 +18,7 @@ app.engine("handlebars", exHandle({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes
-const routes = require("./controllers/burgers_controller.js");
+var routes = require("./controllers/burgers_controller.js");
 app.use(routes);
 
 // Add listener
