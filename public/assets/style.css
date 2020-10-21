@@ -96,7 +96,7 @@ li {
     padding: 3px 0 0 0;
 }
 
-.devoured-btn,
+.devour-btn,
 .delete-btn {
     border: 1px solid black;
     background: none;
@@ -104,7 +104,7 @@ li {
     padding: 0px 7px;
 }
 
-.devoured-btn:hover {
+.devour-btn:hover {
     border: 1px solid rgba(241, 241, 42, 1);
     background: rgba(241, 241, 42, 1);
     color: black;
