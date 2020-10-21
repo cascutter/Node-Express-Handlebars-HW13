@@ -15,6 +15,8 @@
 # Description
 A burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). Follows the MVC design pattern; uses Node and MySQL to query and route data, and Handlebars to generate  HTML.
 
+* <a href="https://pure-lake-63894.herokuapp.com/">Link to Deployed App on Heroku.</a>
+
 <img src="public/assets/images/Eat-Da-Burger.png">
     
 ## Installation
@@ -53,6 +55,9 @@ The application allows users to accomplish the following tasks:
           
 ## Tests
 All tests currently passing.
+
+## Future Development
+* This is a slow-moving app. Would like to spend more time focusing on refactoring for efficiency.
             
 ## Questions
 All questions regarding this application can be directed to: 
