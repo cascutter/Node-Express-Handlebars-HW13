@@ -1,27 +1,8 @@
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
+// // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
 
-    
-    $(".eat-burger").on("click", function(event) {
-        event.preventDefault();
-        
-        var id = $(this).data("id");
-        var devouredState = {
-            devoured: 1
-        };
-        
-        // Send the PUT request.
-        $.ajax("/api/burgers/" + id, {
-            type: "PUT",
-            data: devouredState
-        }).then(function() {
-            console.log("Burger devoured!");
-            location.reload();
-        });
-    });
-    
     // Add a new burger.
-    $(".burger-form").on("submit", function(event) {
+    $(".add-btn").on("submit", function(event) {
         event.preventDefault();
 
         var newBurger = {
@@ -34,23 +15,41 @@ $(function() {
             type: "POST",
             data: newBurger
         }).then(function() {
-            console.log("New burger added!");
+            console.log("Added new burger");
             // Reload the page to get the updated burger list.
             location.reload();
         });
     });
 
-    $(".delete-burger").on("click", function(event) {
+    $(".devour-btn").on("click", function(event) {
         event.preventDefault();
 
         var id = $(this).data("id");
+        var devouredState = {
+            devoured: 1
+        };
 
+        // Send the PUT request.
+        $.ajax("/api/burgers/" + id, {
+            type: "PUT",
+            data: devouredState
+        }).then(function() {
+            console.log("Burger devoured");
+            location.reload();
+        });
+    });
+
+    $(".delete-btn").on("click", function() {
+        const id = $(this).data("id");
+
+        let currentURL = window.location.origin;
         // Send the DELETE request.
-        $.ajax({
-            type: "DELETE",
-            url: "/api/burgers/" + id
-        }).then(location.reload());
-        console.log("Burger deleted!")
+        $.ajax(currentURL + "/api/burgers/" + id, {
+            type: "DELETE "
+        }).then(function() {
+            console.log("id: " + id + "is deleted!");
+            $(".devoured-burger" + id).remove();
+        });
     });
 
 })
