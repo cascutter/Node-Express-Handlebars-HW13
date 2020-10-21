@@ -1,0 +1,117 @@
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/public/assets/images/flyingburgers.png");
+    background-size: cover;
+    background-position: 50%;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+
+/* title
+  ---------------------------------------- */
+
+.my-container {
+    background-color: gold;
+    margin: 3rem auto;
+    margin-top: 5rem;
+    box-shadow: 5px 10px 18px red;
+}
+
+h1 {
+    font-family: 'Hind Madurai', sans-serif;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.9);
+    text-shadow: 3px 3px 3px red;
+    text-align: center;
+    font-size: 45px;
+    line-height: 0.8em;
+}
+
+.eat-da {
+    font-size: 35px;
+    text-shadow: 2px 2px rgba(255, 255, 65, 0);
+}
+
+h3 {
+    font-size: 20px;
+}
+
+#burger-name:placeholder {
+    color: rgb(190, 190, 190);
+}
+
+#burger-name:focus::placeholder {
+    color: transparent;
+}
+
+.add-btn {
+    background: black;
+    color: white;
+    border: none;
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 57px;
+    }
+    .icon-burger {
+        width: 40px;
+    }
+}
+
+
+/* burger list
+  ---------------------------------------- */
+
+h4 {
+    background: rgba(148, 214, 242, 0.92);
+    margin: 0;
+    padding: 10px;
+    font-size: 19px;
+}
+
+.wait-container,
+.devoured-container {
+    padding: 0;
+}
+
+.wait-container ul,
+.devoured-container ul {
+    background: rgba(191, 223, 237, 0.92);
+    padding: 0 0 10px 0;
+    min-height: 40px;
+}
+
+li {
+    list-style: none;
+    padding: 3px 0 0 0;
+}
+
+.devoured-btn,
+.delete-btn {
+    border: 1px solid black;
+    background: none;
+    margin: 2px;
+    padding: 0px 7px;
+}
+
+.devoured-btn:hover {
+    border: 1px solid rgba(241, 241, 42, 1);
+    background: rgba(241, 241, 42, 1);
+    color: black;
+}
+
+.delete-btn:hover {
+    border: 1px solid rgba(255, 124, 41, 1);
+    background: rgba(255, 124, 41, 1);
+    color: black;
+}
