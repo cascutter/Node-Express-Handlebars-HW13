@@ -21,6 +21,7 @@ router.post("/api/burgers", function(req, res) {
     if (req.body.devoured === "true") {
         devoured = 1;
     }
+    console.log(req.body);
     burger.insertOne(
         ["burger_name", "devoured"], [req.body.burger_name, devoured],
         function(result) {
@@ -50,7 +51,7 @@ router.put("/api/burgers/:id", function(req, res) {
 });
 
 router.delete("/api/burgers/:id", function(req, res) {
-    const condition = `id = ${req.params.id}`;
+    var condition = `id = ${req.params.id}`;
 
     burger.deleteOne(condition, function(result) {
         if (result.affectedRows == 0) {
